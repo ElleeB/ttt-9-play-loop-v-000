@@ -1,4 +1,6 @@
 # Helper Methods
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -35,4 +37,10 @@ def turn(board)
   end
 end
 
-# Define your play method below
+def play(board)
+  counter = 0
+  loop do
+    counter += 1
+      turn(board) until counter == 9
+  end
+end
